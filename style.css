@@ -1,0 +1,174 @@
+html{
+    font-size: 62.5%; /*16px X 62.5 = 10px = 1 rem*/
+    box-sizing: border-box;
+}
+
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+.header{
+    grid-area: header;
+    background-color:#2e9884;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.main{
+    grid-area: main;
+}
+
+.brand a{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-links a{
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    
+}
+
+.nav-links a:hover{
+    color: #17374f;
+   
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255 255 255 / 75%);
+    background-color: #2a2a2a;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*Home Page*/
+.products{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10%;
+    padding: 2rem;
+    border:  0.1rem solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.products li{
+
+    padding: 0;
+    flex: 0 1 34rem;
+    margin: 1rem;
+    width: 24rem;
+    height: 34rem;
+    margin: 2rem 2rem 5rem 2rem;
+}
+
+.product-name{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#193c51;
+}
+
+.product-type{
+    font-size: 1.2rem;
+    color: #808080;
+}
+
+.product-price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.product-rating{
+    font-size: 1rem;
+}
+
+.product-img{
+    max-width: 34rem;
+    max-width: 34rem;
+    border-radius: 10%;
+}
+
+/*Aside Bar*/
+
+.hamburger-menu{
+    color: white;
+    font-size: 3rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 30rem;
+    background-color:#232323;
+    color: blanchedalmond;
+    height: 100%;
+}
+
+.sidebar a{
+    color: blanchedalmond;
+}
+
+.sidebar.open{
+    transform: translateX(0);
+}
+
+.sidebar-close-btn{
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+}
+
+.sidebar-header{
+   padding: 1.5rem;
+   background-color :#193c51;
+}
+
+.sidebar li{
+    padding: 0.2rem;
+}
